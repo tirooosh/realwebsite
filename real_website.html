@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Joyful Links</title>
+</head>
+<body>
+    <h1 style="text-align: center;">Welcome to the Joyful Links</h1>
+    <p style="text-align: center;">Check out these fun links:</p>
+
+    <div style="position: relative; width: 100%; height: 500px;">
+        <!-- JavaScript arrays for chosen and random links -->
+        <script>
+            var chosenLinks = [
+                "https://www.youtube.com/embed/_7lq0YLRLBM",
+                "https://www.youtube.com/embed/5fsITJ1yj4E",
+                "https://www.youtube.com/embed/oxHAuTHFhT0",
+                "https://www.youtube.com/embed/PSkH14dz4b8"
+            ];
+
+            var randomLinks = [
+				"https://www.youtube.com/embed/C680oxL__ck",
+				"https://www.youtube.com/embed/7vTlOJWKNx0",
+				"https://www.youtube.com/embed/t6J-m7I056E",
+				"https://www.youtube.com/embed/ntHMsyr3R6w",
+				"https://www.youtube.com/embed/AuixBGkLjfo",
+				"https://www.youtube.com/embed/kkfUTcMmkts",
+				"https://www.youtube.com/embed/lFvrjguieo0",
+				"https://www.youtube.com/embed/nxkuo5AAxco",
+				"https://www.youtube.com/embed/Tv9Yq_Da92Y",
+				"https://www.youtube.com/embed/L1bHI7Nc34Q",
+				"https://www.youtube.com/embed/RY8JtPwmjxc",
+				"https://www.youtube.com/embed/ShQYLzs4N5M",
+				"https://www.youtube.com/embed/eNo436Otbx8",
+				"https://www.youtube.com/embed/2DKReTlVO2E",
+				"https://www.youtube.com/embed/fXha4CAQp2s",
+				"https://www.youtube.com/embed/TcMBFSGVi1c",
+				"https://www.youtube.com/embed/iZyXA1N6BRY",
+				"https://www.youtube.com/embed/msSc7Mv0QHY",
+				"https://www.youtube.com/embed/LDU_Txk06tM",
+				"https://www.youtube.com/embed/WRh_mCxd3UY",
+				"https://www.youtube.com/embed/dQw4w9WgXcQ",
+				"https://www.youtube.com/embed/9bZkp7q19f0",
+				"https://www.youtube.com/embed/E1ljClS0DhM",
+				"https://www.youtube.com/embed/6gwL4g3MoOg",
+				"https://www.youtube.com/embed/astISOttCQ0",
+				"https://www.youtube.com/embed/fuT6qbFbJO8",
+				"https://www.youtube.com/embed/77ZF50ve6rs",
+				"https://www.youtube.com/embed/1v5gtOkyCG0",
+				"https://www.youtube.com/embed/VqRy8_jYftg",
+				"https://www.youtube.com/embed/59MaNHq8UDo",
+				"https://www.youtube.com/embed/7N8IDv8viZk",
+				"https://www.youtube.com/embed/AXrHbrMrun0",
+				"https://www.youtube.com/embed/2tkYYXUum7k",
+				"https://www.youtube.com/embed/tcfitI7XMYo",
+				"https://www.youtube.com/embed/Ct6BUPvE2sM",
+				"https://www.youtube.com/embed/oyY1ifuyUD0",
+				"https://www.youtube.com/embed/SfT4FMkh1-w",
+				"https://www.youtube.com/embed/GSbyBNN647k",
+				"https://www.youtube.com/embed/GPXkjtpGCFI",
+				"https://www.youtube.com/embed/35KDnej1hlI",
+				"https://www.youtube.com/embed/h7oqtfgvT64",
+				"https://www.youtube.com/embed/8Pc0AEbfnBM",
+				"https://www.youtube.com/embed/o7zqouVuFZY",
+				"https://www.youtube.com/embed/Rxs4tg9AfH8",
+				"https://www.youtube.com/embed/mSoDBDdCmB4",
+				"https://www.youtube.com/embed/BYVZh5kqaFg",
+				"https://www.youtube.com/embed/EEvopkbc4FE",
+				"https://www.youtube.com/embed/jNQXAC9IVRw",
+				"https://www.youtube.com/embed/ARm9dRtv0V4",
+				"https://www.youtube.com/embed/VyxMZ2vS3dI",
+				"https://www.youtube.com/embed/rRPQs_kM_nw",
+				"https://www.youtube.com/embed/Y8CKlTlQA64",
+				"https://www.youtube.com/embed/wjXBqelv4GM",
+				"https://www.youtube.com/embed/-khHhU00d1Q",
+				"https://www.youtube.com/embed/7KGnjcy3oAM",
+				"https://www.youtube.com/embed/13pgxOCHKh0",
+				"https://www.youtube.com/embed/IaE039IiYt4",
+				"https://www.youtube.com/embed/65nfbW-27ps",
+				"https://www.youtube.com/embed/GyOkxlxxaZE",
+				"https://www.youtube.com/embed/rW6FJHTjz0",
+				"https://www.youtube.com/embed/UFPqfgvQM2Q",
+				"https://www.youtube.com/embed/3YasCzybyt4",
+				"https://www.youtube.com/embed/J5coBNrByq4",
+				"https://www.youtube.com/embed/N6a6EUvgSFQ",
+				"https://www.youtube.com/embed/UT6ww_FyUNM",
+				"https://www.youtube.com/embed/huj-sSTgbi8",
+				"https://www.youtube.com/embed/z9OGF0rYlss",
+				"https://www.youtube.com/embed/7BqLKGJZ9lI",
+				"https://www.youtube.com/embed/FDWV81drPVE",
+				"https://www.youtube.com/embed/oSCX78-8-q0",
+				"https://www.youtube.com/embed/N2JsClYxvds",
+				"https://www.youtube.com/embed/13X_rGLJLn0",
+				"https://www.youtube.com/embed/61x6hfibEHI",
+				"https://www.youtube.com/embed/8Are9dDbW24",
+				"https://www.youtube.com/embed/IdoD2147Fik",
+				"https://www.youtube.com/embed/UbKGDjsEQ70",
+				"https://www.youtube.com/embed/3h-5zhEPSfQ",
+				"https://www.youtube.com/embed/TqHqTFtH_pw",
+				"https://www.youtube.com/embed/X2DUpDxFJyg",
+				"https://www.youtube.com/embed/LLYKlQ2nwqQ",
+				"https://www.youtube.com/embed/96NUsT-1k2A",
+				"https://www.youtube.com/embed/VxZ_EIZMiqs",
+				"https://www.youtube.com/embed/ImNoam3qbIE",
+				"https://www.youtube.com/embed/Cqd1Gvq-RBY",
+				"https://www.youtube.com/embed/x0CJKvevs2M",
+				"https://www.youtube.com/embed/pL4fke8vkFE",
+				"https://www.youtube.com/embed/NfUeUCErCmQ",
+				"https://www.youtube.com/embed/wnRwETx33Jg",
+				"https://www.youtube.com/embed/b_fHC2TT4xY",
+				"https://www.youtube.com/embed/qaHv1ropSiU",
+				"https://www.youtube.com/embed/z_eFUnYJqdg",
+				"https://www.youtube.com/embed/Ue9J933oXgA",
+				"https://www.youtube.com/embed/cN6HiFzO5QE",
+				"https://www.youtube.com/embed/O9ak89FwYeI",
+				"https://www.youtube.com/embed/jsYwFizhncE",
+				"https://www.youtube.com/embed/RuSg0rmPyN0",
+				"https://www.youtube.com/embed/BvQ571eAOZE",
+				"https://www.youtube.com/embed/eEgeFjsgjAg"
+];
+
+
+            // Function to open a YouTube video in a modal
+            function openVideo(videoURL) {
+                var modal = document.getElementById("videoModal");
+                var videoFrame = modal.querySelector("iframe");
+                videoFrame.src = videoURL;
+                modal.style.display = "block";
+            }
+
+            // Function to close the modal
+            function closeVideo() {
+                var modal = document.getElementById("videoModal");
+                var videoFrame = modal.querySelector("iframe");
+                videoFrame.src = "";
+                modal.style.display = "none";
+            }
+
+            // Function to check if a position is occupied by another link
+            function isPositionOccupied(usedPositions, top, left) {
+                var positionKey = top + '-' + left;
+                return usedPositions[positionKey];
+            }
+
+            // Generate random non-overlapping positions for links
+            var usedPositions = {};
+            for (var i = 0; i < chosenLinks.length; i++) {
+                var topPosition, leftPosition;
+                do {
+                    topPosition = Math.floor(Math.random() * 650) + 50;
+                    leftPosition = Math.floor(Math.random() * 1700);
+                } while (isPositionOccupied(usedPositions, topPosition, leftPosition));
+
+                usedPositions[topPosition + '-' + leftPosition] = true;
+
+                document.write('<a class="chosen-link" href="javascript:void(0);" onclick="openVideo(\'' + chosenLinks[i] + '\');" style="position: absolute; top: ' + topPosition + 'px; left: ' + leftPosition + 'px;">real Link ' + (i + 1) + '</a>');
+            }
+
+            for (var j = 0; j < randomLinks.length; j++) {
+                do {
+                    topPosition = Math.floor(Math.random() * 600) + 100;
+                    leftPosition = Math.floor(Math.random() * 1400) + 100;
+                } while (isPositionOccupied(usedPositions, topPosition, leftPosition));
+
+                usedPositions[topPosition + '-' + leftPosition] = true;
+
+                document.write('<a class="random-link" href="javascript:void(0);" onclick="openVideo(\'' + randomLinks[j] + '\');" style="position: absolute; top: ' + topPosition + 'px; left: ' + leftPosition + 'px;">Random Video ' + (j + 1) + '</a>');
+            }
+        </script>
+    </div>
+
+    <!-- Modal for YouTube videos -->
+    <div id="videoModal" class="modal" style="display: none;">
+        <span class="close" onclick="closeVideo()">&times;</span>
+        <iframe width="560" height="315" src="" frameborder="0" allowfullscreen></iframe>
+    </div>
+
+    <style>
+        .modal {
+            display: none;
+            position: fixed;
+            z-index: 1;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            overflow: auto;
+            background-color: rgba(0,0,0,0.7);
+        }
+        
+        .modal iframe {
+            display: block;
+            margin: 0 auto;
+            margin-top: 10%;
+            width: 560px;
+            height: 315px;
+        }
+        
+        .close {
+            position: absolute;
+            top: 15px;
+            right: 35px;
+            font-size: 30px;
+            font-weight: bold;
+            color: #fff;
+        }
+    </style>
+</body>
+</html>
